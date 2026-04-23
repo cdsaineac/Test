@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Verbos Reflexivos - H5P</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #2c3e50;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* CONTENIDO */
+.container {
+    padding: 20px;
+}
+
+.activity {
+    display: none;
+}
+
+.activity.active {
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔹 NAVBAR -->
+<nav>
+    <h1>Verbos Reflexivos</h1>
+    <div class="nav-buttons">
+        <button onclick="showActivity('act1')">Sopa de letras</button>
+        <button onclick="showActivity('act2')">Completar</button>
+    </div>
+</nav>
+
+<!-- 🔹 CONTENIDO -->
+<div class="container">
+
+    <!-- ACTIVIDAD 1 -->
+    <div id="act1" class="activity active">
+        <h2>Sopa de letras</h2>
+        <iframe src="Verbos reflexivos.html" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+
+    <!-- ACTIVIDAD 2 -->
+    <div id="act2" class="activity">
+        <h2>Completar oraciones</h2>
+        <iframe src="Verbos reflexivos completar.html" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer>
+    Hecho por: Laura Bonilla. 2026
+</footer>
+
+<script>
+function showActivity(id) {
+    document.querySelectorAll('.activity').forEach(el => {
+        el.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
